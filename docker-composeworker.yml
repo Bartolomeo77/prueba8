@@ -6,7 +6,7 @@ services:
     ports:
       - "9097:8087"                                 
     environment:
-      - SPARK_MASTER=spark://192.168.0.8:7077
+      - SPARK_MASTER=spark://192.168.0.18:7077
       - SPARK_WORKER_CORES=2
       - SPARK_WORKER_MEMORY=2G
       - SPARK_DRIVER_MEMORY=2G
