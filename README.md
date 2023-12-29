@@ -25,14 +25,7 @@ Los siguientes pasos le permitirán ejecutar los spark cluster's containers.
 
 * Docker compose  installed
 
-## Build the image
-```sh
-cd spark_docker
-```
 
-```sh
-docker build -t cluster-apache-spark:3.0.2 .
-```
 
 ## Run the docker-compose
 
@@ -40,6 +33,17 @@ El último paso para crear su clúster de prueba será ejecutar compose file:
 
 ```sh
 docker-compose up -d
+```
+
+## Run the docker-compose WORKERS
+
+El último paso para crear su clúster de prueba será ejecutar compose file:
+
+```sh
+docker network create prueba8_spark-network
+```
+```sh
+docker-compose -f docker-composeworker.yml up -d
 ```
 
 ## Validate your cluster
